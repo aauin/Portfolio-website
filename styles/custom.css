@@ -1,0 +1,250 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+    color: #838383;
+    background-color: #1c1c1c;
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    background-color: #1c1c1c;
+    overflow: hidden;
+}
+
+
+/*  LEFT  */
+
+.left-side {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.left-container {
+    width: 500px;
+    margin-left: auto;
+}
+
+.left-container p {
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+
+/*  RIGHT  */
+
+.right-side {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    max-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.right-container {
+    width: 500px;
+    margin-right: auto;
+}
+
+.right-container p {
+    margin-right: 3rem;
+}
+
+
+/*  PARAGRAPHS  */
+
+.left-side p:nth-child(1) {
+    font-family: 'Courier Prime', monospace;
+    font-size: 18px;
+    color: #838383;
+}
+
+.left-side p:nth-child(2) {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 60px;
+    color: #ffefe9;
+    margin-top: -0.5rem;
+}
+
+.left-side p:nth-child(3) {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    color: #FF4C00;
+    margin-top: -3rem;
+}
+
+.left-side p:nth-child(4) {
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    font-size: 18px;
+    color: #838383;
+}
+
+.left-side p:nth-child(5) {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    color: #838383;
+    margin-top: 5rem;
+}
+
+.left-side p:nth-child(6) {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    color: #838383;
+}
+
+.left-side p:nth-child(7) {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    color: #838383;
+}
+
+.left-side p:nth-child(8) {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    color: #838383;
+}
+
+.icon-container {
+    display: flex;
+    gap: 20px;
+    margin-top: auto; 
+    margin-bottom: 50px;
+    width: 500px;
+    margin-left: auto;
+    padding-left: 3rem;
+}
+  
+.icon-container img {
+    width: 40px; 
+    height: 40px; 
+}
+
+.see-more {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #e9e1de;
+}
+
+
+/*  TABLES  */
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+}
+  
+.table td {
+    padding: none;
+    border: none;
+    background-color: transparent;
+}
+  
+.table p {
+    margin: 0;
+}
+  
+.right-container p {
+    margin-bottom: 20px;
+    margin-right: 3rem;
+}
+  
+.table p:first-child {
+    font-family: 'Inter', sans-serif;
+    color: #e9e1de;
+}
+
+.table p:not(:first-child) {
+    color: #838383;
+}
+
+.date-cell {
+    font-size: 14px; 
+    padding-top: 6px;
+}
+
+.skill {
+    background-color: #45342D;
+    color: #FF4C00;
+    border: none;
+    padding: 8px 16px;
+    margin-right: 3px; 
+    margin-bottom: 7px;
+    font-size: 14px; 
+    cursor: default;
+    border-radius: 20px; 
+}
+
+.table td .blog-date {
+    font-weight: 600;
+    color: #838383;
+}
+  
+.table td .blog-title {
+    color: #ECECEC;
+}
+
+
+/*  SMALLER WINDOW  */
+
+@media (max-width: 1000px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-side,
+    .right-side {
+        width: 100%;
+        margin: 0;
+        margin-top: 20px;
+    }
+
+    .right-side {
+        max-height: 100%;
+    }
+    
+
+    .left-side p:nth-child(5),
+    .left-side p:nth-child(6),
+    .left-side p:nth-child(7),
+    .left-side p:nth-child(8) {
+        display: none;
+    }
+
+    .icon-container {
+        display: flex;
+        gap: 20px;
+        margin: 20px 0;
+        justify-content: flex-start;
+    }
+
+    .left-container,
+    .left-container p {
+        margin-right: 3rem;
+        text-align: left;
+        width: 100%;
+    }
+
+    .right-container,
+    .right-container p {
+        margin-left: 22px;
+        text-align: left;
+        max-width: 100%;
+        width: auto;
+    }
+}
+

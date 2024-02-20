@@ -1,0 +1,16 @@
+{
+  "name": "portfolio-website",
+  "version": "1.0.0",
+  "description": "🚀 My Portfolio Website",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwindcss build styles/tailwind.css -o styles/tailwind.output.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}
