@@ -199,6 +199,18 @@ body {
 }
 
 
+/*  LINKS  */
+
+.clickable-row:hover {
+    background-color: #ffffff04; 
+    cursor: pointer; 
+}
+
+.clickable-row:hover .link_arrow {
+    transform: scale(1.2);
+}
+
+
 /*  SMALLER WINDOW  */
 
 @media (max-width: 1000px) {
@@ -247,4 +259,3 @@ body {
         width: auto;
     }
 }
-

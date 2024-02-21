@@ -53,4 +53,45 @@ document.addEventListener("DOMContentLoaded", function () {
             leftSideParagraph8.style.fontSize = initialFontSize8 + "px";
         }
     });
+
+    // Click event listener to each table row
+    document.querySelectorAll('.table-row').forEach(function(row) {
+        row.addEventListener('click', function() {
+            var url = this.querySelector('a').getAttribute('href');
+            
+            window.location.href = url;
+        });
+    });
+
+    // Save the initial scroll position when the page loads
+    var initialState = {
+        scrollPosition: rightSide.scrollTop
+    };
+
+    history.replaceState(initialState, document.title, window.location.href);
+
+    rightSide.addEventListener("scroll", function () {
+        history.replaceState({ scrollPosition: rightSide.scrollTop }, document.title, window.location.href);
+    });
+
+    window.addEventListener('unload', function () {
+        sessionStorage.setItem('scrollPosition', rightSide.scrollTop);
+    });
+
+    window.addEventListener('popstate', function (event) {
+        var previousState = event.state;
+
+        // Restore the previous scroll position
+        if (previousState) {
+            rightSide.scrollTop = previousState.scrollPosition;
+        }
+    });
+
+    // Check if there's a stored scroll position in sessionStorage
+    var storedScrollPosition = sessionStorage.getItem('scrollPosition');
+    if (storedScrollPosition) {
+        rightSide.scrollTop = storedScrollPosition;
+    }
+
 });
+
