@@ -1,0 +1,175 @@
+<!-- projectB.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/projectB.css"> 
+  <title>Local Vibes</title>
+</head>
+<body>
+
+  <div class="container">
+
+    <header>
+      <div>
+        <h1>Local Vibes</h1>
+        <h2>City Ratings Web App</h2>
+      </div>
+      <a href="../index.html" id="home-link"><img src="../images/home.png" class="icon"></a>
+    </header>
+
+    <div class="content">
+      <div class="left-side">
+        <p>Introducing <i>Local Vibes</i>, a user-friendly city ratings app designed to provide insights 
+          into cities across the United States. This database-driven platform offers real-time ratings 
+          and reviews, allowing users to explore essential factors like cost of living, crime rates, 
+          housing, employment, schools, and cultural amenities. Whether you're a traveler searching for 
+          the perfect destination or a potential resident curious about your next hometown, <i>Local Vibes</i> 
+          is your guide to unraveling the unique characteristics of each city. With an intuitive interface 
+          and a wealth of information, it's a go-to resource for anyone interested in discovering the essence 
+          of urban spaces.
+        </p>
+      </div>
+      <div class="right-side">
+        <img src="../images/projectB/home.png" alt="Big Image">
+      </div>
+    </div>
+
+    <div class="center-paragraph">
+      <h1>What kind of project is this?</h1>
+      <p><i>Local Vibes</i> is a meticulously designed city ratings app focused on U.S. cities with 
+        populations exceeding 100,000. The database-driven architecture incorporates key entities such 
+        as Cities, Users, Ratings, Reviews, and Categories, facilitating a comprehensive exploration of 
+        urban landscapes. The database establishes 1:M connections between Cities and Reviews, Cities 
+        and Ratings, as well as M:M connections between Cities and Users, emphasizing the dynamic 
+        relationship between users and city data. The Users entity captures user information, including 
+        user_id, username, user_fname, user_lname, email, gender, and race_ethnicity, fostering 1:M 
+        relationships with Reviews and Ratings, and M:M relationships with Cities through the Users_Cities 
+        intersection table. This table manages user residencies, recording details like user_city_id, 
+        user_id, city_id, start_year, end_year, and current_resident. The Reviews entity details city 
+        reviews, while the Ratings entity stores category-specific scores, both forming connections with 
+        Cities and Users. Categories entity defines rating and review criteria, establishing a M:1 
+        relationship with Ratings. <i>Local Vibes</i> seamlessly integrates a sophisticated database structure, 
+        providing users with a technically robust platform for insightful exploration of city characteristics.
+      </p>
+    </div><br>
+
+    <div class="center-paragraph">
+      <h1>Key Entities</h1>
+      <ul>
+        <li><em>Cities:</em> US cities with populations over 100,000.</li>
+        <li><em>Users:</em> Individuals interacting with the platform.</li>
+        <li><em>Ratings:</em> Numerical evaluations based on criteria like cost of living, crime rate, 
+          housing, employment, schools, culture/amenities, and user ratings.</li>
+        <li><em>Reviews:</em> Detailed feedback and opinions posted by users, similar to platforms like 
+          IMDb or Rotten Tomatoes.</li>
+        <li><em>Categories:</em> Criteria used for city ratings.</li>
+      </ul>
+    </div><br><br><br>
+
+    <div class="center-paragraph-title">
+      <h1>Sample Database With Normalization Applied</h1>
+    </div>
+
+    <div class="content">
+      <div class="left-side2">
+        <img src="../images/projectB/users.png" alt="Big Image">
+      </div>
+      <div class="right-side2"><br><br>
+        <h1>USERS</h1>
+        <ul>
+          <li>1:M Users to Reviews: One user can leave zero, one, or many reviews</li>
+          <li>1:M Users to Ratings: One user can contribute to many ratings</li>
+          <li>M:M Users to Cities: One user can be a past/present resident of many cities, and one 
+            city can have many users (residents)</li>
+          <li>1:M Users to Users_Cities: One user can have many residencies, defining the M:M relationship 
+            of Users with Cities</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="left-side2"><br><br>
+        <h1>CITIES</h1>
+        <ul>
+          <li>1:M Cities to Reviews: One city can have many reviews</li>
+          <li>1:M Cities to Ratings: One city can have many ratings</li>
+          <li>M:M Cities to Users: One city can have many users (past/current residents) and one user 
+            can be a past/current resident of many cities</li>
+          <li>1:M Cities to Users_Cities: One city can have many residencies, defining the M:M relationship 
+            of Cities with Users</li>
+        </ul>
+      </div>
+      <div class="right-side2">
+        <img src="../images/projectB/cities.png" alt="Big Image">
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="left-side2">
+        <img src="../images/projectB/users-cities.png" alt="Big Image">
+      </div>
+      <div class="right-side2"><br><br>
+        <h1>USERS_CITIES</h1>
+        <ul>
+          <li>M:1 Users_Cities to Users: Many residencies correspond to one user</li>
+          <li>M:1 Users_Cities to Cities: Many residencies correspond to one city</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="left-side2"><br><br>
+        <h1>REVIEWS</h1>
+        <ul>
+          <li>M:1 Reviews to Cities: Many reviews can be written for one city</li>
+          <li>M:1 Reviews to Users: Many reviews can be written by one user</li>
+        </ul>
+      </div>
+      <div class="right-side2">
+        <img src="../images/projectB/reviews.png" alt="Big Image">
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="left-side2">
+        <img src="../images/projectB/ratings.png" alt="Big Image">
+      </div>
+      <div class="right-side2"><br><br>
+        <h1>RATINGS</h1>
+        <ul>
+          <li>1:M Ratings to Categories: One rating has many categories</li>
+          <li>M:1 Ratings to Cities: Many ratings can be submitted for one city</li>
+          <li>M:1 Ratings to Users: Many ratings can be submitted by one user</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="left-side2"><br><br>
+        <h1>CATEGORIES</h1>
+        <ul>
+          <li>M:1 Categories to Ratings: Many categories belong to one rating</li>
+        </ul>
+      </div>
+      <div class="right-side2">
+        <img src="../images/projectB/categories.png" alt="Big Image">
+      </div>
+    </div><br><br><br>
+
+    <div class="content">
+      <div class="left-side3">
+        <h1>Entity-Relationship Diagram</h1>
+        <img src="../images/projectB/ERD.png" alt="Big Image">
+      </div>
+      <div class="right-side3">
+        <h1>Schema</h1>
+        <img src="../images/projectB/schema.png" alt="Big Image">
+      </div>
+    </div>
+    <br><br><br><br><br>
+
+</body>
+</html>
