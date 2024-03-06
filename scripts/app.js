@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var scrollPosition = rightSide.scrollTop;
 
         var triggerPoint1 = 300;
-        var triggerPoint2 = 1600;
+        var triggerPoint2 = 1400;
         var triggerPoint3 = 2400;
         var triggerPoint4 = 3000;
 
