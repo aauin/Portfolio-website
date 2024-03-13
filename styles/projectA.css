@@ -40,6 +40,7 @@ header h2 {
 .icon {
     width: auto;
     height: 30px;
+    text-align: top;
 }
 
 .content {
@@ -49,7 +50,8 @@ header h2 {
     overflow: hidden;
 }
 
-.left-side, .right-side {
+.left-side, 
+.right-side {
     width: 50%;
     box-sizing: border-box;
 }
@@ -115,4 +117,61 @@ header h2 {
 
 em {
     color: #ff4d0093;
+}
+
+
+/* SMALLER WINDOW */
+
+@media (max-width: 1100px) {
+    .container {
+        width: auto;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: left;
+        padding-left: 6rem;
+    }
+
+    .icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: auto;
+        height: 30px;
+        padding-top: 85px;
+        padding-right: 6rem;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .left-side,
+    .right-side,
+    .center-paragraph,
+    .left-side2,
+    .right-side2 {
+        width: auto;
+        padding: 4rem 6rem 0 6rem;
+        margin: 0;
+    }
+
+    .right-side,
+    .left-side2,
+    .right-side2 {
+        text-align: center;
+    }
+
+    .left-side img,
+    .right-side img,
+    .left-side2 img,
+    .right-side2 img {
+        max-width: 500px;
+        height: auto;
+    }
+
+    .left-side p {
+        margin-right: 0;
+    }
 }

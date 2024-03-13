@@ -249,12 +249,12 @@ body {
     .icon-container {
         display: flex;
         gap: 20px;
-        margin: 0; /* Reset margin for the smaller window */
+        margin: 0;
         justify-content: flex-start;
         position: static;
         width: 100%;
         transform: translate(0, 0);
-        margin-top: 40px; /* Add a margin-bottom for the desired gap */
+        margin-top: 40px;
     }
 
     .left-container,
@@ -264,9 +264,8 @@ body {
         width: 100%;
     }
 
-    .right-container,
-    .right-container p {
-        margin-left: 32px;
+    .right-container {
+        margin-left: 62px;
         text-align: left;
         max-width: 100%;
         width: auto;

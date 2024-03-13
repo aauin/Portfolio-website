@@ -123,3 +123,109 @@ header h2 {
 em {
     color: #ff4d0093;
 }
+
+
+/* SMALLER WINDOW */
+
+@media (max-width: 1100px) {
+    .container {
+        width: auto;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: left;
+        padding-left: 6rem;
+    }
+
+    .icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: auto;
+        height: 30px;
+        padding-top: 85px;
+        padding-right: 6rem;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .left-side,
+    .right-side,
+    .left-side2,
+    .right-side2 {
+        width: auto;
+        padding: 4rem 6rem 0 6rem;
+        margin: 0;
+    }
+
+    .right-side {
+        padding-bottom: 4rem;
+    }
+
+    .center-paragraph {
+        width: auto;
+        padding: 1rem 6rem 0 6rem;
+        margin: 0;
+    }
+
+    .center-paragraph-title {
+        width: auto;
+        margin-top: 5rem;
+        margin-bottom: -3rem;
+    }
+
+    .right-side,
+    .left-side2,
+    .right-side2 {
+        text-align: center;
+    }
+
+    .left-side img,
+    .right-side img,
+    .left-side2 img,
+    .right-side2 img {
+        max-width: 500px;
+        height: auto;
+    }
+
+    .left-side3,
+    .right-side3 {
+        text-align: center;
+        margin-top: 6rem;
+    }
+
+    .left-side3 img,
+    .right-side3 img {
+        max-width: 600px;
+        height: auto;
+        display: inline-block;
+    }
+
+    .content:nth-child(odd) .left-side2,
+    .content:nth-child(even) .right-side2 {
+        order: -1;
+        text-align: left;
+        padding-left: 12rem;
+        padding-right: 12rem;
+        margin-bottom: -4rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    .content:nth-child(odd) .left-side2,
+    .content:nth-child(even) .right-side2 {
+        padding-left: 9rem;
+        padding-right: 9rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .content:nth-child(odd) .left-side2,
+    .content:nth-child(even) .right-side2 {
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
+}
