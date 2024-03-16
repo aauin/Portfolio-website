@@ -140,12 +140,29 @@ body {
     height: 40px; 
 }
 
+.icon-container a img {
+    transition: transform 0.2s ease-in-out;
+}
+  
+.icon-container a:hover img {
+    transform: scale(1.1);
+}  
+
 .see-more {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 18px;
     color: #e9e1de;
 }
+
+.see-more:hover {
+    cursor: pointer;
+}
+
+.see-more:hover .link_arrow {
+    transform: scale(1.2);
+}
+  
 
 
 /*  TABLES  */
@@ -269,5 +286,48 @@ body {
         text-align: left;
         max-width: 100%;
         width: auto;
+    }
+}
+
+
+/* SMARTPHONE WINDOW */
+
+@media (max-width: 430px) {
+    .container {
+        flex-direction: column;
+        margin-top: -2rem;
+    }
+
+    .left-side,
+    .right-side {
+        width: 100%;
+        margin: 0;
+        position: static;
+        padding: 1rem;
+    }
+
+    .left-container,
+    .right-container {
+        width: auto;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .left-container p {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+    }
+
+    .icon-container {
+        gap: 10px; 
+        justify-content: left;
+        margin-top: 0; 
+        margin-left: -15px;
+    }
+
+    .right-container p {
+        margin-bottom: 20px;
+        margin-right: 0.5rem;
     }
 }

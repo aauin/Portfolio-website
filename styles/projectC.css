@@ -229,3 +229,59 @@ em {
         padding-right: 6rem;
     }
 }
+
+
+/* SMARTPHONE WINDOW */
+
+@media (max-width: 430px) {
+    .container {
+        flex-direction: column;
+        margin-top: -2rem;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: left;
+        padding-left: 3rem;
+        padding-top: 3rem;
+    }
+
+    .icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: auto;
+        height: 30px;
+        padding-top: 78px;
+        padding-right: 3rem;
+    }
+
+    .left-side,
+    .right-side,
+    .left-side2,
+    .right-side2 {
+        width: auto;
+        padding: 2rem 3rem 0 3rem;
+        margin: 0;
+    }
+
+    .left-side {
+        margin-right: -3rem;
+    }
+
+    .right-side {
+        padding-bottom: 2rem;
+    }
+
+    .center-paragraph {
+        width: auto;
+        padding: 1rem 3rem 0 3rem;
+        margin: 0;
+    }
+
+    .center-paragraph-title {
+        width: auto;
+        margin-top: 2.5rem;
+        margin-bottom: -1rem;
+    }
+}

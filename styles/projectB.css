@@ -252,3 +252,73 @@ em {
         padding-right: 6rem;
     }
 }
+
+
+/* SMARTPHONE WINDOW */
+
+@media (max-width: 430px) {
+    .container {
+        flex-direction: column;
+        margin-top: -2rem;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: left;
+        padding-left: 3rem;
+        padding-top: 3rem;
+    }
+
+    .icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: auto;
+        height: 30px;
+        padding-top: 78px;
+        padding-right: 3rem;
+    }
+
+    .left-side,
+    .right-side,
+    .left-side2,
+    .right-side2 {
+        width: auto;
+        padding: 2rem 3rem 0 3rem;
+        margin: 0;
+    }
+
+    .left-side {
+        margin-right: -3rem;
+    }
+
+    .right-side {
+        padding-bottom: 4rem;
+    }
+
+    .center-paragraph {
+        width: auto;
+        padding: 1rem 3rem 0 3rem;
+        margin: 0;
+    }
+
+    .center-paragraph-title {
+        width: auto;
+        margin-top: 1rem;
+    }
+
+    .left-side3,
+    .right-side3 {
+        text-align: center;
+        margin-top: 3rem;
+    }
+
+    .content:nth-child(odd) .left-side2,
+    .content:nth-child(even) .right-side2 {
+        order: -1;
+        text-align: left;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        margin-bottom: -2rem;
+    }
+}

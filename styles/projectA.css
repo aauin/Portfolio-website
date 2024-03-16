@@ -175,3 +175,40 @@ em {
         margin-right: 0;
     }
 }
+
+
+/* SMARTPHONE WINDOW */
+
+@media (max-width: 430px) {
+    .container {
+        flex-direction: column;
+        margin-top: -2rem;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: left;
+        padding-left: 3rem;
+        padding-top: 3rem;
+    }
+
+    .icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: auto;
+        height: 30px;
+        padding-top: 78px;
+        padding-right: 3rem;
+    }
+
+    .left-side,
+    .right-side,
+    .center-paragraph,
+    .left-side2,
+    .right-side2 {
+        width: auto;
+        padding: 2rem 3rem 0 3rem;
+        margin: 0;
+    }
+}
