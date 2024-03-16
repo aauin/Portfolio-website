@@ -182,24 +182,31 @@ em {
 @media (max-width: 430px) {
     .container {
         flex-direction: column;
-        margin-top: -2rem;
+        margin-top: -1rem;
+        font-size: 16px;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column-reverse;
     }
 
     header {
         flex-direction: column;
         text-align: left;
-        padding-left: 3rem;
-        padding-top: 3rem;
+        padding-left: 2rem;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+    
+    header h2 {
+        font-size: 20px;
     }
 
     .icon {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: auto;
-        height: 30px;
-        padding-top: 78px;
-        padding-right: 3rem;
+        height: 0;
     }
 
     .left-side,
@@ -208,7 +215,7 @@ em {
     .left-side2,
     .right-side2 {
         width: auto;
-        padding: 2rem 3rem 0 3rem;
+        padding: 0 2rem 1rem 2rem;
         margin: 0;
     }
 }
